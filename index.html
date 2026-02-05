@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIIT Pune | Comprehensive Information</title>
+    <style>
+        /* --- CSS VARIABLES & RESET --- */
+        :root {
+            --primary-color: #0f172a; /* Deep Navy */
+            --secondary-color: #334155; /* Slate */
+            --accent-color: #fbbf24; /* Muted Gold */
+            --text-color: #333;
+            --bg-color: #f8fafc;
+            --white: #ffffff;
+            --section-padding: 4rem 2rem;
+            --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.7;
+        }
+
+        /* --- TYPOGRAPHY --- */
+        h1, h2, h3 {
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        h1 { font-size: 2.5rem; letter-spacing: -0.5px; }
+        h2 { font-size: 2rem; border-bottom: 3px solid var(--accent-color); display: inline-block; padding-bottom: 0.5rem; margin-bottom: 2rem; }
+        h3 { font-size: 1.25rem; color: var(--secondary-color); }
+        p { margin-bottom: 1.5rem; font-size: 1.05rem; }
+
+        /* --- NAVIGATION --- */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: var(--shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo { font-size: 1.5rem; font-weight: bold; color: var(--accent-color); }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--accent-color); }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle { display: none; cursor: pointer; font-size: 1.5rem; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 { color: var(--white); margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; opacity: 0.9; max-width: 600px; margin: 0 auto; }
+
+        /* --- MERGER ALERT --- */
+        .alert-banner {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #ffeeba;
+            font-weight: 600;
+        }
+
+        /* --- LAYOUT GRID --- */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        section { padding: var(--section-padding); }
+        
+        section:nth-child(even) { background-color: var(--white); }
+
+        /* --- CARDS --- */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            border-top: 4px solid var(--primary-color);
+            transition: transform 0.2s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+
+        /* --- TABLE STYLES --- */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+            background: var(--white);
+            box-shadow: var(--shadow);
+        }
+
+        .data-table th, .data-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .data-table th {
+            background-color: var(--primary-color);
+            color: var(--white);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem 1rem;
+            margin-top: auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1100px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .footer-grid h4 { color: var(--accent-color); margin-bottom: 1rem; }
+        .footer-grid p { margin-bottom: 0.5rem; color: #cbd5e1; }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--primary-color);
+                padding: 1rem;
+            }
+            nav ul.active { display: flex; }
+            .menu-toggle { display: block; }
+            .hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="alert-banner">
+        ⚠️ Important Update: VIIT Pune is merging with VIT Pune (Bibwewadi) to create a unified educational entity. Admission intakes may be combined.
+    </div>
+
+    <header>
+        <div class="logo">VIIT PUNE</div>
+        <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+        <nav>
+            <ul id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#academics">Academics</a></li>
+                <li><a href="#admissions">Admissions</a></li>
+                <li><a href="#placements">Placements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Vishwakarma Institute of Information Technology</h1>
+            <p>An Autonomous Institute affiliated with Savitribai Phule Pune University. NAAC 'A' Accredited.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>About the Institute</h2>
+            <p>Established in 2002, <strong>Vishwakarma Institute of Information Technology (VIIT)</strong> is a premier engineering college in Pune, Maharashtra. Run by the Bansilal Ramnath Agarwal Charitable Trust (BRACT), the institute is known for its academic rigor and vibrant campus life.</p>
+            
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Autonomy</h3>
+                    <p>Granted autonomous status, allowing for a dynamic curriculum that evolves with industry standards.</p>
+                </div>
+                <div class="card">
+                    <h3>Accreditation</h3>
+                    <p>Accredited with an 'A' Grade by NAAC and programs accredited by NBA. ISO 9001:2015 certified.</p>
+                </div>
+                <div class="card">
+                    <h3>Location</h3>
+                    <p>Located in Kondhwa (Budruk), offering a serene learning environment distinct from the city center.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="academics">
+        <div class="container">
+            <h2>Academics</h2>
+            <p>VIIT offers a wide range of Undergraduate (B.Tech), Postgraduate (M.Tech), and Doctoral (PhD) programs. The curriculum focuses on project-based learning and industry internships.</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Department / Branch</th>
+                        <th>Program Type</th>
+                        <th>Key Focus Areas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Computer Engineering</td>
+                        <td>B.Tech, M.Tech, PhD</td>
+                        <td>Software Dev, Algorithms, Systems</td>
+                    </tr>
+                    <tr>
+                        <td>Information Technology</td>
+                        <td>B.Tech, M.Tech</td>
+                        <td>Web Tech, Cloud Computing, DB</td>
+                    </tr>
+                    <tr>
+                        <td>AI & Data Science</td>
+                        <td>B.Tech</td>
+                        <td>Machine Learning, Big Data, Analytics</td>
+                    </tr>
+                    <tr>
+                        <td>E & TC Engineering</td>
+                        <td>B.Tech, M.Tech, PhD</td>
+                        <td>VLSI, Embedded Systems, IoT</td>
+                    </tr>
+                    <tr>
+                        <td>Mechanical Engineering</td>
+                        <td>B.Tech, M.Tech, PhD</td>
+                        <td>Design, Thermal, Manufacturing</td>
+                    </tr>
+                    <tr>
+                        <td>Civil Engineering</td>
+                        <td>B.Tech, M.Tech, PhD</td>
+                        <td>Structural, Environmental, Construction</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="admissions">
+        <div class="container">
+            <h2>Admissions & Eligibility</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Entrance Exams</h3>
+                    <p>Admissions are primarily based on scores from:</p>
+                    <ul>
+                        <li><strong>MHT-CET</strong> (Maharashtra State Candidates)</li>
+                        <li><strong>JEE Main</strong> (All India Candidates)</li>
+                        <li><strong>GATE</strong> (For M.Tech)</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3>Eligibility Criteria</h3>
+                    <p><strong>B.Tech:</strong> Passed 10+2 with Physics and Math as compulsory subjects, along with Chem/Bio/Tech subject. Min 45% marks (40% for reserved categories).</p>
+                </div>
+                <div class="card">
+                    <h3>Application Mode</h3>
+                    <p>Centralized Admission Process (CAP) conducted by the State Common Entrance Test Cell, Maharashtra.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="placements">
+        <div class="container">
+            <h2>Placements</h2>
+            <p>The institute shares a centralized placement cell with the Vishwakarma Group, ensuring access to top-tier global recruiters. <em>(Note: Stats often reflect the combined group performance).</em></p>
+
+            <div class="grid-3">
+                <div class="card" style="text-align: center;">
+                    <h3>51 LPA</h3>
+                    <p>Highest Package Offered (Recent Cycles)</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3>7.5 LPA</h3>
+                    <p>Average Salary Package</p>
+                </div>
+                <div class="card" style="text-align: center;">
+                    <h3>85%+</h3>
+                    <p>Placement Percentage</p>
+                </div>
+            </div>
+
+            <br>
+            <h3>Top Recruiters</h3>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1rem;">
+                <span style="background: #e2e8f0; padding: 5px 15px; border-radius: 20px;">Nvidia</span>
+                <span style="background: #e2e8f0; padding: 5px 15px; border-radius: 20px;">Mercedes-Benz</span>
+                <span style="background: #e2e8f0; padding: 5px 15px; border-radius: 20px;">Atlas Copco</span>
+                <span style="background: #e2e8f0; padding: 5px 15px; border-radius: 20px;">Infosys</span>
+                <span style="background: #e2e8f0; padding: 5px 15px; border-radius: 20px;">Cognizant</span>
+                <span style="background: #e2e8f0; padding: 5px 15px; border-radius: 20px;">Accenture</span>
+                <span style="background: #e2e8f0; padding: 5px 15px; border-radius: 20px;">Rakuten</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" style="background-color: var(--white);">
+        <div class="container">
+            <h2>Contact Information</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <h3>Address</h3>
+                    <p>Vishwakarma Institute of Information Technology<br>
+                    Survey No. 3/4, Kondhwa (Budruk),<br>
+                    Pune - 411048, Maharashtra, India</p>
+                </div>
+                <div class="card">
+                    <h3>Connect</h3>
+                    <p><strong>Phone:</strong> 020-26950200 / 400<br>
+                    <strong>Email:</strong> admission@viit.ac.in<br>
+                    <strong>Website:</strong> www.viit.ac.in</p>
+                </div>
+                <div class="card">
+                    <h3>Merger Note</h3>
+                    <p>For the latest admission updates regarding the VIIT-VIT merger, please visit the official Vishwakarma Institutes website or the State CET Cell portal.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div>
+                <h4>VIIT Pune</h4>
+                <p>Excellence in Engineering Education since 2002.</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <p><a href="#academics" style="color: #cbd5e1;">Departments</a></p>
+                <p><a href="#placements" style="color: #cbd5e1;">Placements</a></p>
+            </div>
+            <div>
+                <h4>Legal</h4>
+                <p>© 2024-2025 Vishwakarma Institute of Information Technology.</p>
+                <p>All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple Mobile Menu Toggle
+        function toggleMenu() {
+            const nav = document.getElementById('nav-links');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
